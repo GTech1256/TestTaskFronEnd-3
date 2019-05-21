@@ -1,29 +1,19 @@
-# hr-test
+# test-task
 
-## Project setup
-```
-yarn install
-```
+## Описание задания:
 
-### Compiles and hot-reloads for development
 ```
-yarn run serve
+Доверстать небольшой проект, состоящий из 2х страниц.
 ```
+## Требования к заданию:
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+* Использовать шрифт Roboto
+* Список картинок для слайдера, хранить в vuex
+* Сделать 3х шаговый туториал, как в макете  PSD
+* Адаптировать верстку под мобильные устройства, как в макете  PSD
+* Результат залить в отдельную ветку
 
-### Run your tests
-```
-yarn run test
-```
 
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Материалы:
+* SVG и картинки все лежат уже в проекте
+* PSD макет здесь [Download PSD](https://drive.google.com/open?id=1tJ8029HhAPPYYfN4j-x0bMN__HqZ3J50).
