@@ -1,5 +1,5 @@
 <template>
-  <swiper :options="swiperOption" ref="mySwiper">
+  <swiper class="swiper" :options="swiperOption" ref="mySwiper">
     <swiper-slide></swiper-slide>
 
     <div class="swiper-pagination" slot="pagination"></div>
@@ -41,8 +41,8 @@ export default {
 
 };
 </script>
-
 <style scoped lang="stylus">
-
+.swiper-container
+  height 100%
 </style>
 

@@ -97,10 +97,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-/*
-.header__pl-svg .cls-2
-      fill: #ffffff;
-*/
 .header 
   display: flex;
   height: vw(160, $grid-breakpoints.lg);
