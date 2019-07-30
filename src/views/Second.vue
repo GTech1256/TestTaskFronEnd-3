@@ -1,7 +1,7 @@
 <template>
   <div id="container" :data-step="stepData">
     <Header />
-    <div class="content">
+    <section class="content">
       <div class="content__left">
         <Slider />
       </div>
@@ -34,10 +34,13 @@
               C441.339,189.487,459.308,207.471,459.319,229.668z"/>
               </g>
             </svg>
-          </button>
-        </form>
-      </div>
-    </div>
+          </button><!-- /.content__submit -->
+        </form><!-- /.content__form -->
+      </div><!-- /.content__right -->
+    </section><!-- /.content -->
+    <tutorial-text-control 
+      class="container__tutorial"
+    />
   </div>
 </template>
 
@@ -45,6 +48,7 @@
 // @ is an alias to /src
 import Header from "@/components/Header.vue";
 import Slider from "@/components/Slider.vue";
+import TutorialTextControl from "@/components/TutorialTextControl.vue";
 
 import {
   TUTORIAL_START
@@ -55,7 +59,8 @@ export default {
   name: "home",
   components: {
     Header,
-    Slider
+    Slider,
+    TutorialTextControl
   },
   data() {
     return {};
@@ -97,10 +102,17 @@ export default {
     .header
       overlayGrayActive()
 
+  &[data-step="step_2"]
+    .container__tutorial
+      top: vw(570)
+
   &[data-step="step_3"]
     .content__right,
     .header
       overlayGrayActive()
+    .container__tutorial
+      top: vw(332)
+      right: vw(35)
 
 .content 
   display flex
@@ -144,6 +156,14 @@ export default {
 
   background-color $red
   border: none
+
+.container__tutorial
+  position absolute
+  top: vw(232)
+  right: vw(300)
+  z-index: 1000
+
+  transition: top 0.2s ease-out, right 0.2s ease-out
 
 </style>
 

@@ -90,7 +90,6 @@ export default {
     withoutBG: {
       type: Boolean,
       default: false,
-      requied: true,
     }
   }
 };
