@@ -83,7 +83,7 @@ export default {
      */
     withoutBG: {
       type: Boolean,
-      default: true,
+      default: false,
       requied: true,
     }
   }
