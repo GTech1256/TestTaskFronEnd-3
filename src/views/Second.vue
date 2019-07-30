@@ -40,6 +40,7 @@
     </section><!-- /.content -->
     <tutorial-text-control 
       class="container__tutorial"
+      v-if="tutorialIsStarted"
     />
   </div>
 </template>

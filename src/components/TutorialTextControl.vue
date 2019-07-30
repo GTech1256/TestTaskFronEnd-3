@@ -19,6 +19,12 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
+
+import {
+  TUTORIAL_STOP,
+  NEXT_STEP
+} from "../store/mutation-types"
+
 export default {
   name: 'tutorial-control',
   data: () => ({
@@ -46,10 +52,10 @@ export default {
   },
   methods: {
     nextStep() {
-      this.$store.commit("NEXT_STEP")
+      this.$store.commit(NEXT_STEP)
     },
     skip() {
-      this.$store.commit("TUTORIAL_SKIP")
+      this.$store.commit(TUTORIAL_STOP)
     }
   }
 }

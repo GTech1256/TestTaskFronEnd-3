@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import tutorial from './store/modules/tutorial/index'
+import tutorial from './modules/tutorial/index'
 
 Vue.use(Vuex)
 
