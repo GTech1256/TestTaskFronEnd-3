@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <Header colored="white" />
+    <Header withoutBG />
     <router-link to="/second" id="start">Начать</router-link>
   </div>
 </template>
