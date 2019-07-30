@@ -10,8 +10,8 @@
           xmlns:dc="http://purl.org/dc/elements/1.1/"
           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
           xmlns:svg="http://www.w3.org/2000/svg" 
-          width="200" 
-          height="154.81912" 
+          width="104" 
+          height="80" 
           preserveAspectRatio="xMidYMid" 
           version="1.1" 
           viewBox="0 0 200 154.81912"
@@ -100,7 +100,8 @@ export default {
   height: vw(160, $grid-breakpoints.lg);
   width: 100%;
   padding: 0 vw(40, $grid-breakpoints.lg)
-  
+  padding-top: vw(20, $grid-breakpoints.lg)
+
   justify-content: space-between;
   align-items: center;
   
