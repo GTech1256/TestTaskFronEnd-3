@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" :data-step="stepData">
     <Header />
     <div class="content">
       <div class="content__left">
@@ -49,6 +49,7 @@ import Slider from "@/components/Slider.vue";
 import {
   TUTORIAL_START
 } from '../store/mutation-types';
+import { mapGetters } from "vuex";
 
 export default {
   name: "home",
@@ -60,6 +61,15 @@ export default {
     return {};
   },
   methods: {},
+  computed: {
+    stepData() {
+      return this.tutorialIsStarted ? `step_${this.currentStep}` : null 
+    },
+    ...mapGetters([
+      'currentStep',
+      'tutorialIsStarted'
+    ])
+  },
   mounted() {
     this.$store.commit(TUTORIAL_START)
   }
@@ -72,7 +82,25 @@ export default {
   min-height: 100%
   // Header {position:absolute}
   padding-top: vw(160, $grid-breakpoints.lg);
+  position: relative
 
+  .content__left,
+  .content__right,
+  .header
+    overlayGray()
+  .header
+    position absolute
+
+  &[data-step="step_1"],
+  &[data-step="step_2"]
+    .content__left,
+    .header
+      overlayGrayActive()
+
+  &[data-step="step_3"]
+    .content__right,
+    .header
+      overlayGrayActive()
 
 .content 
   display flex
@@ -116,5 +144,6 @@ export default {
 
   background-color $red
   border: none
+
 </style>
 

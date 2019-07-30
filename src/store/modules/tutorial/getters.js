@@ -1,3 +1,4 @@
 export default {
-  getStep: (state) => state.currentStep,
+  currentStep: (state) => state.currentStep,
+  tutorialIsStarted: (state) => state.isStarted,
 }
