@@ -37,14 +37,14 @@ export default {
 
 .button-start 
   display: block
-  padding: vw(17) vw(54)
+  padding: vw(18) vw(55)
 
   color: #333;
   text-decoration: none
   font-family: $font-family;
-  font-size: vw(24)
+  font-size: vw(22)
   line-height: vw(24)
-  letter-spacing: letterSpacingPH(40, 24)
+  letter-spacing: 1px
   text-transform: uppercase
   
   background: #fff

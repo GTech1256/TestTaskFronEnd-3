@@ -32,6 +32,12 @@
         </svg>
       </a>
     </div>
+    <router-link 
+      class="header__title" 
+      to="/"
+    >
+      Тестовое задание
+    </router-link>
     <div class="header__logo header__logo--right">
       <a class="header__logo-link" href="#">
         YouTube
@@ -115,12 +121,28 @@ export default {
 
     .header__pl-svg .cls-2
       fill: #ffffff;
+
     .header__youtube-svg .text
       fill: #ffffff;
+    
+    .header__title
+      display none
 
 .header__logo-link
   font-size 0;
 
+.header__title
+  padding: 0
+  padding-top vw(40)
+  padding-left vw(40)
+  margin: 0
+  margin-right: auto
+  align-self: self-start;
+
+  color: $dark-text
+  font-size: vw(40)
+  line-height: vw(36)
+  letter-spacing: -1px
 
 </style>
 
