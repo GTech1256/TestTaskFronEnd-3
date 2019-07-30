@@ -46,6 +46,10 @@
 import Header from "@/components/Header.vue";
 import Slider from "@/components/Slider.vue";
 
+import {
+  TUTORIAL_START
+} from '../store/mutation-types';
+
 export default {
   name: "home",
   components: {
@@ -55,7 +59,10 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
+  mounted() {
+    this.$store.commit(TUTORIAL_START)
+  }
 };
 </script>
 
