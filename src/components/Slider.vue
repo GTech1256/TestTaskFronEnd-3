@@ -9,7 +9,7 @@
       <img class="swiper__content" src="@/assets/img/1.jpg">
     </swiper-slide>
     <swiper-slide>
-      <img src="@/assets/img/2.jpg">
+      <img class="swiper__content" src="@/assets/img/2.jpg">
     </swiper-slide>
 
     <div class="swiper-pagination" slot="pagination"></div>
@@ -96,7 +96,8 @@ export default {
       margin-right: 0
 
   .swiper-pagination
-    margin-left: vw(20, $grid-breakpoints.ms)
+    margin-bottom: vw(18, $grid-breakpoints.ms)
+    margin-left: vw(19, $grid-breakpoints.ms)
 
     font-size: vw(18, $grid-breakpoints.ms)
     letter-spacing: vw(-1, $grid-breakpoints.ms)

@@ -16,7 +16,7 @@ export default {
 
     if (isTooLargeStep(newStep)) {
       state.isStarted = false
-      state.currentStep = 0;
+      state.currentStep = 1;
       return 
     }
 

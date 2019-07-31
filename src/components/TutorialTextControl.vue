@@ -6,8 +6,8 @@
     <p 
       class="tutorial__text"
       :class="tutorialTextModifier"
+      v-html="text[currentStep - 1]"
     >
-      {{ text[currentStep - 1] }}
     </p>
     <button class="tutorial__next" @click="nextStep">
       Далее
@@ -29,9 +29,9 @@ export default {
   name: 'tutorial-control',
   data: () => ({
     text: [
-      'Введите вдрес картинки в белое текстовое поле',
-      'После, нажите красную кнопку, чтобы добавить картинку в слайдер',
-      'Можно увидеть новую картинку'
+      'Введите вдрес картинки<br>в белое текстовое поле',
+      'После, нажите красную кнопку,<br>чтобы добавить картинку в слайдер',
+      'Можно увидеть<br>новую картинку'
     ]
   }),
   computed: {
@@ -73,6 +73,7 @@ export default {
 
   position: relative
 
+  letter-spacing: vw(-0.3)
   font-size: vw(24)
   font-weight: 400
   line-height: vw(36)
@@ -97,6 +98,7 @@ export default {
 
   font-size: vw(24)
   line-height vw(36)
+  letter-spacing: vw(-0.2)
   text-align: right 
 
   &--width
@@ -169,11 +171,6 @@ export default {
     margin-left auto
     margin-right auto
   
-  .tutorial__title::before
-    left: 50%
-    transform: translateX(-50%)
-
-
   .tutorial__title
     margin-bottom: vw(17, $grid-breakpoints.ms)
 
@@ -183,21 +180,19 @@ export default {
     &::before
       height: vw(1, $grid-breakpoints.ms)
       width: vw(126, $grid-breakpoints.ms)
-
-      left: vw(4, $grid-breakpoints.ms)
+      
+      left: 50%
+      
+      transform: translateX(-50%)
     
   .tutorial__text
+    width: 100%
     margin-bottom: vw(19, $grid-breakpoints.ms)
-    max-width: vw(290, $grid-breakpoints.ms)
+    max-width: 100%
 
     font-size: vw(24, $grid-breakpoints.ms)
     line-height: vw(36, $grid-breakpoints.ms)
-
-    &--width
-      &--420
-        max-width: vw(420, $grid-breakpoints.ms)
-      &--190
-        max-width: vw(190, $grid-breakpoints.ms)
+    text-align: center
 
   .tutorial__next
     margin-bottom: vw(18, $grid-breakpoints.ms)

@@ -9,7 +9,7 @@
         <form class="content__form" v-on:submit.prevent="add">
           <label class="content__label">
             Ссылка на картинку
-            <input class="content__input" type="text">
+            <input class="content__input" type="url" required>
           </label>
           <button class="content__submit" type="submit">
             Добавить ссылку
@@ -93,28 +93,54 @@ export default {
 
   .content__left,
   .content__right,
+  .content__label,
+  .content__submit,
   .header
-    overlayGray()
+    overlayGray() // Boilerplate
   .header
     position absolute
 
-  &[data-step="step_1"],
-  &[data-step="step_2"]
-    .content__left,
-    .header
-      overlayGrayActive()
+  // Desktop overlay activate
+  @media $display-breakpoints.sm-and-up 
+    &[data-step="step_1"],
+    &[data-step="step_2"]
+      .content__left,
+      .header
+        overlayGrayActive()
 
-  &[data-step="step_2"]
-    .container__tutorial
-      top: 544px
+    &[data-step="step_2"]
+      .container__tutorial
+        top: 544px
 
-  &[data-step="step_3"]
-    .content__right,
-    .header
-      overlayGrayActive()
-    .container__tutorial
-      top: vw(325)
-      right: vw(30)
+    &[data-step="step_3"]
+      .content__right,
+      .header
+        overlayGrayActive()
+      .container__tutorial
+        top: vw(325)
+        right: vw(30)
+
+  // Mobile overlay activate
+  @media $display-breakpoints.ms-and-down
+    &[data-step="step_1"]
+      .header,
+      .content__left,
+      .content__submit
+        overlayGrayActive()
+
+    &[data-step="step_2"]
+      .header,
+      .content__left,
+      .content__label
+        overlayGrayActive()
+
+    &[data-step="step_3"]
+      .header,
+      .content__left,
+      .content__submit,
+      .content__label
+        overlayGrayActive()
+      
 
 .content 
   display: flex
@@ -137,21 +163,22 @@ export default {
 
 .content__label
   margin 0
-  margin-bottom vw(20)
 
   color: $dark-text
   font-size: vw(18)
-  line-height vw(18)
+  line-height vw(16)
 
   text-align: center;
 
 .content__input
   width: vw(180)
-  margin-top: vw(20)
+  margin-top: vw(22)
+  padding: vw(6)
 
   border: none
 
-  line-height 28px
+  line-height: vw(16)
+  font-size: vw(16)
 
 .content__submit
   padding vw(20)
@@ -194,6 +221,8 @@ export default {
   .content__label
     padding-top: vw(14, $grid-breakpoints.ms)
     padding-left: vw(18, $grid-breakpoints.ms)
+    margin: 0;
+    flex-grow: 1;
 
     font-size: vw(18, $grid-breakpoints.ms)
 
@@ -203,8 +232,10 @@ export default {
   .content__input
     display: block
     margin: 0
+    padding: vw(6, $grid-breakpoints.ms)
 
-    line-height: vw(40, $grid-breakpoints.ms)
+    font-size: vw(26, $grid-breakpoints.ms)
+    line-height: vw(28, $grid-breakpoints.ms)
     width: vw(236, $grid-breakpoints.ms)
 
   .content__submit
@@ -222,11 +253,14 @@ export default {
 
   .container[data-step] .container__tutorial
     width: 100%
-    margin-top: -5px
+    margin-top: vw(-4, $grid-breakpoints.ms)
 
     top: 50%
     left: 50%
 
     transform: translate(-50%, -50%)
+
+  .container[data-step="step_2"] .container__tutorial
+    margin-top: vw(13, $grid-breakpoints.ms)
 </style>
 
