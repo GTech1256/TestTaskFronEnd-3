@@ -101,7 +101,7 @@ export default {
   height: $header-height.lg;
   width: 100%;
   padding: 0 vw(40, $grid-breakpoints.lg)
-  padding-top: vw(20, $grid-breakpoints.lg)
+  padding-top: vw(14, $grid-breakpoints.lg)
 
   justify-content: space-between;
   align-items: center;
@@ -128,7 +128,7 @@ export default {
 
 .header__title
   padding: 0
-  padding-top vw(40)
+  padding-top vw(45)
   padding-left vw(40)
   margin: 0
   margin-right: auto
@@ -139,6 +139,13 @@ export default {
   line-height: 36px
   letter-spacing: -1px
 
+.header__pl-svg
+  width: vw(104)
+  height: vw(80)
+
+.header__youtube-svg
+  width: vw(178)
+  height: vw(40)
 
 @media $display-breakpoints.ms-and-down
   .header
@@ -147,12 +154,12 @@ export default {
     padding-top: vw(40, $grid-breakpoints.ms)
 
   .header__pl-svg
-    width: 52px
-    height: 41px
+    width: vw(52, $grid-breakpoints.ms)
+    height: vw(41, $grid-breakpoints.ms)
 
   .header__youtube-svg
-    width: 90px
-    height: 20px
+    width: vw(90, $grid-breakpoints.ms)
+    height: vw(20, $grid-breakpoints.ms)
 
   .header__title
     display: none

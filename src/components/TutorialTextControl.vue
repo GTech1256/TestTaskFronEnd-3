@@ -69,52 +69,52 @@ export default {
   display: inline-block
   margin: 0
   margin-left: auto
-  margin-bottom: 17px
+  margin-bottom: vw(17)
 
   position: relative
 
-  font-size: 24px
+  font-size: vw(24)
   font-weight: 400
-  line-height: 36px
+  line-height: vw(36)
 
   &::before
-    display block 
-    height: 1px
-    width: 126px
+    display: block 
+    height: vw(1)
+    width: vw(126)
 
-    background-color #fff
+    background-color: #fff
 
-    position absolute
+    position: absolute
     bottom: 0
-    left: 4px
+    left: vw(4)
 
     content: ""
   
 .tutorial__text
   margin: 0
-  margin-bottom: 19px
-  max-width: 290px
+  margin-bottom: vw(19)
+  max-width: vw(290)
 
-  font-size: 24px
-  line-height 36px
+  font-size: vw(24)
+  line-height vw(36)
   text-align: right 
 
   &--width
     &--420
-      max-width: 420px
+      max-width: vw(420)
     &--190
-      max-width: 190px
+      max-width: vw(190)
 
 .tutorial__next
   display: block
-  margin-bottom: 18px
+  margin-bottom: vw(18)
   margin-left: auto
-  padding: 2px 30px
+  padding: vw(2) vw(30)
 
-  font-size: 24px
-  line-height: 36px
+  font-size: vw(24)
+  line-height: vw(36)
 
-  background-color $red
+  background-color: $red
   border: none
   border-radius: 3px
 
@@ -125,15 +125,15 @@ export default {
 
   position: relative
 
-  font-size: 18px
-  line-height: 18px
+  font-size: vw(18)
+  line-height: vw(18)
 
   background: transparent
   border: none
   &::after
     display: block
-    width: 99px
-    height 1px
+    width: vw(99)
+    height: vw(1)
 
     position: absolute
     bottom: 0
@@ -173,4 +173,44 @@ export default {
     left: 50%
     transform: translateX(-50%)
 
+
+  .tutorial__title
+    margin-bottom: vw(17, $grid-breakpoints.ms)
+
+    font-size: vw(24, $grid-breakpoints.ms)
+    line-height: vw(36, $grid-breakpoints.ms)
+
+    &::before
+      height: vw(1, $grid-breakpoints.ms)
+      width: vw(126, $grid-breakpoints.ms)
+
+      left: vw(4, $grid-breakpoints.ms)
+    
+  .tutorial__text
+    margin-bottom: vw(19, $grid-breakpoints.ms)
+    max-width: vw(290, $grid-breakpoints.ms)
+
+    font-size: vw(24, $grid-breakpoints.ms)
+    line-height: vw(36, $grid-breakpoints.ms)
+
+    &--width
+      &--420
+        max-width: vw(420, $grid-breakpoints.ms)
+      &--190
+        max-width: vw(190, $grid-breakpoints.ms)
+
+  .tutorial__next
+    margin-bottom: vw(18, $grid-breakpoints.ms)
+    padding: vw(2, $grid-breakpoints.ms) vw(30, $grid-breakpoints.ms)
+
+    font-size: vw(24, $grid-breakpoints.ms)
+    line-height: vw(36, $grid-breakpoints.ms)
+
+  .tutorial__skip
+    font-size: vw(18, $grid-breakpoints.ms)
+    line-height: vw(18, $grid-breakpoints.ms)
+
+    &::after
+      width: vw(99, $grid-breakpoints.ms)
+      height: vw(1, $grid-breakpoints.ms)
 </style>

@@ -106,7 +106,7 @@ export default {
 
   &[data-step="step_2"]
     .container__tutorial
-      top: vw(544)
+      top: 544px
 
   &[data-step="step_3"]
     .content__right,
@@ -117,41 +117,44 @@ export default {
       right: vw(30)
 
 .content 
-  display flex
-  height 100%
+  display: flex
+  height: 100%
 
 .content__left
-  width vw(1020)
+  width: vw(1020)
 
 .content__right 
-  width vw(260)
-  height 100%
+  width: vw(260)
+  height: 100%
   padding: vw(40)
 
-  background-color #cccccc
+  background-color: #cccccc
 
 .content__form 
-  display flex
-  height 100%
-  flex-direction column
+  display: flex
+  height: 100%
+  flex-direction: column
 
 .content__label
   margin 0
   margin-bottom vw(20)
 
   color: $dark-text
-  font-size: 18px
-  line-height 18px
+  font-size: vw(18)
+  line-height vw(18)
 
   text-align: center;
 
 .content__input
+  width: vw(180)
+  margin-top: vw(20)
+
   border: none
 
   line-height 28px
 
 .content__submit
-  padding 20px
+  padding vw(20)
   margin-top auto
 
   font-size 0
@@ -168,38 +171,54 @@ export default {
 
   transition: top 0.2s ease-out, right 0.2s ease-out
 
+.content__svg-plus
+  width: vw(140)
+  height: vw(140)
+
 @media $display-breakpoints.ms-and-down
   .container
     padding-top: $header-height.ms;
+    height: vw(667, $grid-breakpoints.ms)
+
   .content
     flex-direction: column
 
   .content__right
     width: 100%
-    height: vw(100, 667)
+    height: vw(100, 375)
     padding: 0
 
   .content__form
     flex-direction: row
 
   .content__label
-    margin: auto
+    padding-top: vw(14, $grid-breakpoints.ms)
+    padding-left: vw(18, $grid-breakpoints.ms)
+
+    font-size: vw(18, $grid-breakpoints.ms)
 
     text-align: left
+    line-height: vw(26, $grid-breakpoints.ms)
   
   .content__input
-    display block
+    display: block
+    margin: 0
 
-    line-height: 40px
-    width: vw(450)
+    line-height: vw(40, $grid-breakpoints.ms)
+    width: vw(236, $grid-breakpoints.ms)
 
-  .content__svg-plus 
-    width: 60px
-    height 60px
+  .content__submit
+    padding: vw(20, $grid-breakpoints.ms)
+    margin-left: auto
+
+  .content__svg-plus
+    width: vw(60, $grid-breakpoints.ms)
+    height: vw(60, $grid-breakpoints.ms)
 
   .content__left
-    height: vw(488, 667)
+    flex-grow: 1
     width: 100%
+    height: vw(488, $grid-breakpoints.ms)
 
   .container[data-step] .container__tutorial
     width: 100%
