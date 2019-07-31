@@ -37,21 +37,28 @@ export default {
 
 .button-start 
   display: block
-  padding: vw(18) vw(55)
+  padding: 18px 55px
 
   color: #333;
   text-decoration: none
   font-family: $font-family;
-  font-size: vw(22)
-  line-height: vw(24)
+  font-size: 22px
+  line-height: 24px
   letter-spacing: 1px
   text-transform: uppercase
   
   background: #fff
   border: none;
-  border-radius: vw(10)
+  border-radius: 10px
 
   cursor: pointer
+
+@media $display-breakpoints.ms-and-down
+  .button-start
+    margin-top 75px
+    margin-right: 5px
+    padding-left: 62px
+    padding-right: 48px
 
 </style>
 

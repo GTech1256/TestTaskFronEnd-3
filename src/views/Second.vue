@@ -191,7 +191,7 @@ export default {
     display block
 
     line-height: 40px
-    width: 236px
+    width: vw(450)
 
   .content__svg-plus 
     width: 60px
@@ -203,6 +203,8 @@ export default {
 
   .container[data-step] .container__tutorial
     width: 100%
+    margin-top: -5px
+
     top: 50%
     left: 50%
 

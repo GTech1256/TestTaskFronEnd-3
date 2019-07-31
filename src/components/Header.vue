@@ -143,6 +143,8 @@ export default {
 @media $display-breakpoints.ms-and-down
   .header
     height: $header-height.ms;
+    padding: 0 vw(25, $grid-breakpoints.ms)
+    padding-top: vw(40, $grid-breakpoints.ms)
 
   .header__pl-svg
     width: 52px
