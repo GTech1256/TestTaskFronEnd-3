@@ -14,8 +14,11 @@ export default {
   [NEXT_STEP](state) {
     const newStep = state.currentStep + 1;
 
-    if (isTooLargeStep(newStep))  
-      return;
+    if (isTooLargeStep(newStep)) {
+      state.isStarted = false
+      state.currentStep = 0;
+      return 
+    }
 
     state.currentStep = newStep;
   },
