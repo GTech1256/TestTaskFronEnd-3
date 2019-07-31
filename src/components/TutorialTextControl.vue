@@ -1,5 +1,5 @@
 <template>
-  <section class="tutorial" role="dialog">
+  <section class="tutorial" role="dialog" :class="{ 'tutorial--left': currentStep === 3 }">
     <h2 class="tutorial__title">
       {{ currentStep +  ' / 3' }}
     </h2>
@@ -65,6 +65,21 @@ export default {
   display: flex;
   flex-direction: column;
 
+  &--left
+    .tutorial__text
+      text-align: left
+
+    .tutorial__next,
+    .tutorial__skip,
+    .tutorial__title
+      margin-left: 0
+      margin-right: auto
+    
+    .tutorial__title::before 
+      right: 0
+      left: auto
+      
+
 .tutorial__title
   display: inline-block
   margin: 0
@@ -86,7 +101,7 @@ export default {
 
     position absolute
     bottom: 0
-    left: 0
+    left: 4px
 
     content: ""
   
@@ -107,7 +122,7 @@ export default {
 
 .tutorial__next
   display: block
-  margin-bottom: 16px
+  margin-bottom: 18px
   margin-left: auto
   padding: 2px 30px
 
@@ -120,10 +135,10 @@ export default {
 
 .tutorial__skip
   display: block
+  padding: 0
   margin-left: auto
 
   position: relative
-  left: 4px
 
   font-size: 18px
   line-height: 18px

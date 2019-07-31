@@ -105,25 +105,25 @@ export default {
 
   &[data-step="step_2"]
     .container__tutorial
-      top: vw(570)
+      top: vw(544)
 
   &[data-step="step_3"]
     .content__right,
     .header
       overlayGrayActive()
     .container__tutorial
-      top: vw(332)
-      right: vw(35)
+      top: vw(325)
+      right: vw(30)
 
 .content 
   display flex
   height 100%
 
 .content__left
-  width 1020px
+  width vw(1020)
 
 .content__right 
-  width 260px
+  width vw(260)
   height 100%
   padding: vw(40)
 
@@ -154,6 +154,7 @@ export default {
   margin-top auto
 
   font-size 0
+  line-height: 0
 
   background-color $red
   border: none

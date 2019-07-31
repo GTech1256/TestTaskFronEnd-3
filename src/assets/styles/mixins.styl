@@ -19,7 +19,10 @@ overlayGray()
         transition: background-color .3s
 
         content: ""
+        pointer-events: none
 
 overlayGrayActive()
     &::before
         background-color rgba(0, 0, 0, .75)
+
+        pointer-events: all
