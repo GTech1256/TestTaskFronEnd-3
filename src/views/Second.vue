@@ -145,6 +145,7 @@ export default {
 .content 
   display: flex
   height: 100%
+  min-height: vw(400);
 
 .content__left
   width: vw(1020)
@@ -208,6 +209,7 @@ export default {
     height: vw(667, $grid-breakpoints.ms)
 
   .content
+    min-height: vw(100, $grid-breakpoints.ms)
     flex-direction: column
 
   .content__right
