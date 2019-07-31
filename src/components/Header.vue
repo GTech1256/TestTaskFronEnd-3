@@ -98,7 +98,7 @@ export default {
 <style scoped lang="stylus">
 .header 
   display: flex;
-  height: vw(160, $grid-breakpoints.lg);
+  height: $header-height.lg;
   width: 100%;
   padding: 0 vw(40, $grid-breakpoints.lg)
   padding-top: vw(20, $grid-breakpoints.lg)
@@ -135,9 +135,24 @@ export default {
   align-self: self-start;
 
   color: $dark-text
-  font-size: vw(40)
-  line-height: vw(36)
+  font-size: 40px
+  line-height: 36px
   letter-spacing: -1px
 
+
+@media $display-breakpoints.ms-and-down
+  .header
+    height: $header-height.ms;
+
+  .header__pl-svg
+    width: 52px
+    height: 41px
+
+  .header__youtube-svg
+    width: 90px
+    height: 20px
+
+  .header__title
+    display: none
 </style>
 

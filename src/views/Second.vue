@@ -1,5 +1,5 @@
 <template>
-  <div id="container" :data-step="stepData">
+  <div class="container" :data-step="stepData">
     <Header />
     <section class="content">
       <div class="content__left">
@@ -7,13 +7,14 @@
       </div>
       <div class="content__right">
         <form class="content__form" v-on:submit.prevent="add">
-          <label class="content__label" for="url-input">
+          <label class="content__label">
             Ссылка на картинку
-            </label>
-          <input class="content__input" type="text" id="url-input">
+            <input class="content__input" type="text">
+          </label>
           <button class="content__submit" type="submit">
             Добавить ссылку
             <svg 
+              class="content__svg-plus"
               xmlns="http://www.w3.org/2000/svg" 
               xmlns:xlink="http://www.w3.org/1999/xlink" 
               width="140" 
@@ -83,11 +84,11 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-#container
+.container
   height 100%
   min-height: 100%
   // Header {position:absolute}
-  padding-top: vw(160, $grid-breakpoints.lg);
+  padding-top: $header-height.lg;
   position: relative
 
   .content__left,
@@ -139,18 +140,18 @@ export default {
   margin-bottom vw(20)
 
   color: $dark-text
-  font-size: vw(18)
-  line-height vw(18)
+  font-size: 18px
+  line-height 18px
 
   text-align: center;
 
 .content__input
   border: none
 
-  line-height vw(28)
+  line-height 28px
 
 .content__submit
-  padding vw(20)
+  padding 20px
   margin-top auto
 
   font-size 0
@@ -167,5 +168,44 @@ export default {
 
   transition: top 0.2s ease-out, right 0.2s ease-out
 
+@media $display-breakpoints.ms-and-down
+  .container
+    padding-top: $header-height.ms;
+  .content
+    flex-direction: column
+
+  .content__right
+    width: 100%
+    height: vw(100, 667)
+    padding: 0
+
+  .content__form
+    flex-direction: row
+
+  .content__label
+    margin: auto
+
+    text-align: left
+  
+  .content__input
+    display block
+
+    line-height: 40px
+    width: 236px
+
+  .content__svg-plus 
+    width: 60px
+    height 60px
+
+  .content__left
+    height: vw(488, 667)
+    width: 100%
+
+  .container[data-step] .container__tutorial
+    width: 100%
+    top: 50%
+    left: 50%
+
+    transform: translate(-50%, -50%)
 </style>
 

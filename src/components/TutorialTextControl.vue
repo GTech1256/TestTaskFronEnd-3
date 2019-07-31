@@ -65,21 +65,6 @@ export default {
   display: flex;
   flex-direction: column;
 
-  &--left
-    .tutorial__text
-      text-align: left
-
-    .tutorial__next,
-    .tutorial__skip,
-    .tutorial__title
-      margin-left: 0
-      margin-right: auto
-    
-    .tutorial__title::before 
-      right: 0
-      left: auto
-      
-
 .tutorial__title
   display: inline-block
   margin: 0
@@ -157,13 +142,35 @@ export default {
 
     content: ""
 
+@media $display-breakpoints.sm-and-up 
+  .tutorial--left
+    .tutorial__text
+      text-align: left
+
+    .tutorial__next,
+    .tutorial__skip,
+    .tutorial__title
+      margin-left: 0
+      margin-right: auto
+    
+    .tutorial__title::before 
+      right: 0
+      left: auto
+
+
 @media $display-breakpoints.ms-and-down
   .tutorial
     text-align: center
 
-    .tutorial__next,
-    .tutorial__skip
-      margin-left auto
-      margin-right auto
+  .tutorial__next,
+  .tutorial__skip,
+  .tutorial__title,
+  .tutorial__text
+    margin-left auto
+    margin-right auto
+  
+  .tutorial__title::before
+    left: 50%
+    transform: translateX(-50%)
 
 </style>
